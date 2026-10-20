@@ -1,0 +1,24 @@
+{
+  "name": "trueframe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "description": "Privacy-first video provenance with browser capture, P-256 signatures, Merkle fingerprints and EVM anchoring.",
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "build": "vite build",
+    "test": "node --test test/*.test.mjs",
+    "deploy:contract": "node scripts/deploy-contract.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "express": "^4.21.2",
+    "solc": "^0.8.30"
+  },
+  "devDependencies": {
+    "vite": "^6.1.0"
+  }
+}

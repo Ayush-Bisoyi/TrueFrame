@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: trueframe
+    runtime: node
+    plan: free
+    buildCommand: pnpm install --frozen-lockfile && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: PUBLIC_BASE_URL
+        sync: false
+      - key: CHAIN_NAME
+        value: sepolia
+      - key: RPC_URL
+        sync: false
+      - key: PUBLIC_RPC_URL
+        sync: false
+      - key: PRIVATE_KEY
+        sync: false
+      - key: CONTRACT_ADDRESS
+        sync: false
+      - key: BLOCK_EXPLORER_BASE
+        value: https://sepolia.etherscan.io
